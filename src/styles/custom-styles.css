@@ -38,22 +38,6 @@
 
   --color-gradient-accent1: hsla(209, 62%, 50%, 1);
   --color-gradient-accent2: hsla(174, 59%, 56%, 1);
-
-  --color-code-background: hsla(210, 38%, 98%, 1);
-  --color-code-background-file: hsla(210, 38%, 95%, 1);
-  --color-code-line-hover: hsla(210, 38%, 95%, 1);
-  --color-code-word-highlight: hsla(211, 61%, 43%, 0.6);
-  --color-code-word-highlight-hover: hsla(211, 61%, 43%, 1);
-  --color-code-text: hsla(218, 23%, 23%, 1);
-  --color-code-comment: hsla(216, 15%, 52%, 1);
-  --color-code-punctuation: hsla(184, 52%, 47%, 1);
-  --color-code-const: hsla(256, 100%, 65%, 1);
-  --color-code-bool: hsla(256, 100%, 65%, 1);
-  --color-code-string: hsla(35, 92%, 58%, 1);
-  --color-code-var: hsla(1, 77%, 55%, 1);
-  --color-code-func: hsla(231, 99%, 62%, 1);
-  --color-code-keyword: hsla(256, 100%, 65%, 1);
-  --color-code-regex: hsla(217, 38%, 55%, 1);
 }
 
 .dark {
@@ -73,22 +57,6 @@
 
   --color-gradient-accent1: hsla(209, 62%, 50%, 1);
   --color-gradient-accent2: hsla(174, 59%, 56%, 1);
-
-  --color-code-background: hsla(220, 25%, 12%, 1);
-  --color-code-background-file: hsla(220, 25%, 10%, 1);
-  --color-code-line-hover: hsla(220, 25%, 8%, 1);
-  --color-code-word-highlight: hsla(172, 67%, 70%, 0.75);
-  --color-code-word-highlight-hover: hsl(172, 67%, 70%, 1);
-  --color-code-text: hsla(210, 38%, 95%, 1);
-  --color-code-comment: hsla(216, 15%, 52%, 1);
-  --color-code-punctuation: hsla(210, 38%, 95%, 1);
-  --color-code-const: hsla(326, 100%, 74%, 1);
-  --color-code-bool: hsla(265, 89%, 78%, 1);
-  --color-code-string: hsla(135, 94%, 65%, 1);
-  --color-code-var: hsla(60, 30%, 96%, 1);
-  --color-code-func: hsla(65, 92%, 76%, 1);
-  --color-code-keyword: hsla(191, 97%, 77%, 1);
-  --color-code-regex: hsla(31, 100%, 71%, 1);
 }
 
 @layer base {
