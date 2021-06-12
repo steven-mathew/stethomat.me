@@ -1,26 +1,23 @@
-export const baseUrl = 'https://brianlovin.com'
-export const baseEmail = 'hi@brianlovin.com'
+// Inspired heavily by https://github.com/brianlovin/brian-lovin-next/blob/main/src/config/seo.ts 
+
+export const baseUrl = 'https://read.me'
+export const baseEmail = 'hi@read.me'
 
 export const defaultSEO = {
-  title: 'Brian Lovin',
+  title: 'readme',
   description:
-    'Product designer, podcaster, and writer, living in San Francisco. Currently building native mobile apps at GitHub.',
+    'A space for your work.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    site_name: 'Brian Lovin',
+    site_name: 'readme',
     images: [
       {
-        url: `${baseUrl}/static/meta/og-image.png`,
-        alt: 'Brian Lovin',
+        // url: `${baseUrl}/static/meta/og-image.png`,
+        alt: 'readme',
       },
     ],
-  },
-  twitter: {
-    handle: '@brian_lovin',
-    site: '@brian_lovin',
-    cardType: 'summary_large_image',
   },
 }
 
@@ -47,3 +44,4 @@ export function extendSEO(options: SEOProps) {
     },
   }
 }
+

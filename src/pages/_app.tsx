@@ -1,17 +1,11 @@
-import * as React from 'react'
-import Providers from '~/components/Providers'
-import '~/styles/tailwind.css'
-import 'tailwindcss/utilities.css'
-import '~/styles/custom-styles.css'
-import '~/styles/syntax-highlighting.css'
-import '~/styles/prose-styles.css'
+import '../styles/globals.css'
+import '../styles/custom-styles.css'
+import '../styles/prose-styles.css'
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <Providers>
-      <Component {...pageProps} />
-    </Providers>
-  )
+import {AppProps} from 'next/app'
+
+function App({Component, pageProps}: AppProps) {
+    return <Component {...pageProps} />
 }
 
-export default MyApp
+export default App

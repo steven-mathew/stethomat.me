@@ -3,7 +3,7 @@
   font-family: 'iA Quattro';
   font-stretch: 25% 150%;
   font-weight: 100 1000;
-  src: url('/static/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
+  src: url('../../public/static/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
 }
 
 @layer base {
@@ -13,13 +13,17 @@
 
   /* needed to override tailwind forms styles */
   select {
-    @apply w-full px-4 py-2 border border-gray-200 rounded focus:outline-none focus:border-gray-1000 text-primary dark:border-gray-800 dark:focus:border-gray-600 bg-gray-1000 dark:bg-white bg-opacity-5 hover:bg-opacity-10 focus:ring-0;
+    @apply w-full px-4 py-2 bg-gray-900 border border-gray-200 rounded focus:outline-none focus:border-gray-900 text-primary dark:border-gray-800 dark:focus:border-gray-600 dark:bg-white bg-opacity-5 hover:bg-opacity-10 focus:ring-0;
   }
 }
 
 @layer components {
   .font-list-heading {
     @apply font-sans text-lg font-bold text-primary;
+  }
+
+  .font-title-heading {
+    @apply font-sans text-2xl font-bold text-primary;
   }
 
   .tabbed-navigation::-webkit-scrollbar {
@@ -30,7 +34,7 @@
 /* Your own custom utilities */
 @layer utilities {
   .text-primary {
-    @apply text-gray-1000 dark:text-gray-100;
+    @apply text-gray-900 dark:text-gray-100;
   }
 
   .text-secondary {
@@ -75,11 +79,11 @@
   }
 
   .highlight-link-hover {
-    @apply px-0.5 -mx-0.5 no-underline md:hover:bg-yellow-400 rounded-sm md:dark:hover:bg-yellow-500 dark:bg-opacity-100 text-gray-1000 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000;
+    @apply px-0.5 -mx-0.5 no-underline md:hover:bg-yellow-400 rounded-sm md:dark:hover:bg-yellow-500 dark:bg-opacity-100 text-gray-900 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900;
   }
 
   .highlight-link {
-    @apply px-0.5 -mx-0.5 no-underline bg-yellow-400 rounded dark:bg-gray-100 dark:bg-opacity-20 text-gray-1000 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000;
+    @apply px-0.5 -mx-0.5 no-underline bg-yellow-400 rounded dark:bg-gray-100 dark:bg-opacity-20 text-gray-900 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900;
   }
 
   .blink {
@@ -120,3 +124,126 @@
     }
   }
 }
+
+/* @font-face { */
+/*   font-family: 'iA Quattro'; */
+/*   font-stretch: 25% 150%; */
+/*   font-weight: 100 1000; */
+/*   src: url('../../public/fonts/iAWriterQuattroV.ttf') format('truetype-variations'); */
+/* } */
+
+/* @layer base { */
+/*   body { */
+/*     @apply font-mono; */
+/*     font-family: 'iA Quattro'; /1* TODO: figure this out *1/ */
+/*   } */
+
+/*   /1* needed to override tailwind forms styles *1/ */
+/*   select { */
+/*     @apply w-full px-4 py-2 bg-gray-900 border border-gray-200 rounded focus:outline-none focus:border-gray-900 text-primary 2xl:border-gray-800 2xl:focus:border-gray-600 2xl:bg-white bg-opacity-5 hover:bg-opacity-10 focus:ring-0; */
+/*   } */
+/* } */
+
+/* @layer components { */
+/*   .font-list-heading { */
+/*     @apply font-sans text-lg font-bold text-primary; */
+/*   } */
+
+/*   .tabbed-navigation::-webkit-scrollbar { */
+/*     display: none; */
+/*   } */
+/* } */
+
+/* /1* Your own custom utilities *1/ */
+/* @layer utilities { */
+/*   .text-primary { */
+/*     @apply text-gray-900 2xl:text-gray-100; */
+/*   } */
+
+/*   .text-secondary { */
+/*     @apply text-gray-700 2xl:text-gray-300; */
+/*   } */
+
+/*   .text-tertiary { */
+/*     @apply text-gray-500 2xl:text-gray-500; */
+/*   } */
+
+/*   .text-quaternary { */
+/*     @apply text-gray-400 2xl:text-gray-600; */
+/*   } */
+
+/*   .bg-elevated { */
+/*     @apply bg-gray-400 2xl:bg-gray-50 bg-opacity-5; */
+/*   } */
+
+/*   .timeline-inset { */
+/*     @apply ml-16 md:ml-0; */
+/*   } */
+
+/*   .timeline-full-width { */
+/*     @apply -ml-16 md:ml-0; */
+/*   } */
+
+/*   .filter-none { */
+/*     filter: none; */
+/*   } */
+
+/*   .filter-grayscale { */
+/*     filter: grayscale(100%); */
+/*   } */
+
+/*   .filter-saturate { */
+/*     -webkit-filter: brightness(105%) saturate(200%) contrast(1); */
+/*     filter: brightness(105%) saturate(200%) contrast(1); */
+/*   } */
+
+/*   .filter-blur { */
+/*     backdrop-filter: saturate(180%) blur(20px); */
+/*   } */
+
+/* /1*   .highlight-link-hover { *1/ */
+/* /1*     @apply px-0.5 -mx-0.5 no-underline md:hover:bg-yellow-400 rounded-sm md:group-hover:bg-yellow-500  2xl:bg-opacity-100 text-gray-900 2xl:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000; *1/ */
+/* /1*   } *1/ */
+
+/* /1*   .highlight-link { *1/ */
+/* /1*     @apply px-0.5 -mx-0.5 no-underline bg-yellow-400 rounded dark:bg-gray-100 dark:bg-opacity-20 text-gray-1000 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-1000; *1/ */
+/* /1*   } *1/ */
+
+/*   .blink { */
+/*     animation: blink-animation 1.5s steps(2, start) infinite; */
+/*     -webkit-animation: blink-animation 1.5s steps(2, start) infinite; */
+/*   } */
+
+/*   @keyframes blink-animation { */
+/*     to { */
+/*       visibility: hidden; */
+/*     } */
+/*   } */
+/*   @-webkit-keyframes blink-animation { */
+/*     to { */
+/*       visibility: hidden; */
+/*     } */
+/*   } */
+
+/*   .ripple { */
+/*     position: absolute; */
+/*     width: 64px; */
+/*     height: 64px; */
+/*     border-radius: 64px; */
+/*     margin-left: -32px; */
+/*     margin-top: -32px; */
+/*     animation: ripple 2s forwards cubic-bezier(0.075, 0.82, 0.165, 1); */
+/*   } */
+
+/*   @keyframes ripple { */
+/*     0% { */
+/*       opacity: 0.8; */
+/*       transform: scale(0); */
+/*     } */
+
+/*     100% { */
+/*       opacity: 0; */
+/*       transform: scale(1); */
+/*     } */
+/*   } */
+/* } */
