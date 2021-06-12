@@ -17,22 +17,47 @@ function Home() {
                                 <Link href="/writing" passHref>
                                     <a>writer</a>
                                 </Link>
-                , and{' '}
+                                , and{' '}
                                 <a href="https://github.com/brianlovin">software tinkerer</a>.
-                I&apos;m currently building{' '}
+                                I&apos;m currently building{' '}
                                 <a href="https://github.com/mobile">
                                     native mobile apps at GitHub
-                </a>
-                .
-              </p>
+                                </a>
+                                .
+                            </p>
 
                             <p>
                                 In the past I co-founded{' '}
                                 <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
-                a platform for online communities. Before that, I worked at
-                Facebook building payments systems, and cut my teeth as a
-                product designer at Buffer.
-              </p>
+                                a platform for online communities. Before that, I worked at
+                                Facebook building payments systems, and cut my teeth as a
+                                product designer at Buffer.
+                            </p>
+
+
+                            <p>
+                                In the past I co-founded{' '}
+                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
+                                a platform for online communities. Before that, I worked at
+                                Facebook building payments systems, and cut my teeth as a
+                                product designer at Buffer.
+                            </p>
+
+                            <p>
+                                In the past I co-founded{' '}
+                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
+                                a platform for online communities. Before that, I worked at
+                                Facebook building payments systems, and cut my teeth as a
+                                product designer at Buffer.
+                            </p>
+
+                            <p>
+                                In the past I co-founded{' '}
+                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
+                                a platform for online communities. Before that, I worked at
+                                Facebook building payments systems, and cut my teeth as a
+                                product designer at Buffer.
+                            </p>
                         </div>
                         <div className="flex space-x-4">
                             <Link href="/about" passHref>
@@ -50,7 +75,7 @@ function Home() {
                         <Link href="/writing">
                             <a className="inline-block font-medium highlight-link-hover">
                                 Read all posts &rarr;
-              </a>
+                            </a>
                         </Link>
                     </div>
 
@@ -59,7 +84,7 @@ function Home() {
                         <Link href="/projects">
                             <a className="inline-block font-medium highlight-link-hover">
                                 See all projects &rarr;
-              </a>
+                            </a>
                         </Link>
                     </div>
                 </div>
