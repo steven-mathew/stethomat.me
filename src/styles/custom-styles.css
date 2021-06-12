@@ -1,0 +1,166 @@
+/* Write your own custom component styles here */
+@font-face {
+  font-family: 'iA Quattro';
+  font-stretch: 25% 150%;
+  font-weight: 100 1000;
+  src: url('../../public/static/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
+}
+
+:root {
+    scroll-behavior: auto;
+    @apply dark
+}
+
+::-moz-selection {
+  background: var(--color-bg-accent);
+  color: var(--color-text-on-accent);
+}
+
+::selection {
+  background: var(--color-bg-accent);
+  color: var(--color-text-on-accent);
+}
+
+.light {
+  --color-bg-accent: hsla(205, 79%, 66%, 1);
+  --color-bg-primary: hsla(0, 100%, 100%, 1);
+  --color-bg-secondary: hsla(210, 38%, 95%, 1);
+  --color-bg-accent-hover: hsla(207, 73%, 57%, 1);
+
+  --color-text-accent: hsla(211, 61%, 43%, 1);
+  --color-text-primary: hsla(218, 23%, 23%, 1);
+  --color-text-secondary: hsla(218, 17%, 35%, 1);
+  --color-text-tertiary: hsla(218, 17%, 35%, 1);
+  --color-text-on-accent: hsla(204, 45%, 98%, 1);
+
+  --color-fill-primary: hsla(205, 79%, 83%, 1);
+  --color-fill-secondary: hsla(210, 38%, 95%, 1);
+
+  --color-gradient-accent1: hsla(209, 62%, 50%, 1);
+  --color-gradient-accent2: hsla(174, 59%, 56%, 1);
+}
+
+tempclassblahblahblah {
+  color: #1d2021;
+  color: #3c3836;
+  color: #504945;
+  color: #665c54;
+  color: #bdae93;
+  color: #d5c4a1;
+  color: #ebdbb2;
+  color: #fbf1c7;
+  color: #fb4934;
+  color: #fe8019;
+  color: #fabd2f;
+  color: #b8bb26;
+  color: #8ec07c;
+  color: #83a598;
+  color: #d3869b;
+  color: #d65d0e;
+}
+
+.dark {
+  --color-bg-accent: #fb4934;
+  --color-bg-primary: #1d2021;
+  --color-bg-secondary: #3d3836;
+  --color-bg-accent-hover: #fabd2f; 
+
+  --color-text-accent: #fabd2f;
+  --color-text-primary: #fbf1c7;
+  --color-text-secondary: #ebdbb2;
+  --color-text-tertiary: #d5c4a1;
+  --color-text-quaternary: #bdae93;
+  --color-text-on-accent: #1d2021;
+
+  --color-fill-primary: #fe8019;
+  --color-fill-secondary: #3d3836;
+
+  --color-gradient-accent1: #b8bb26;
+  --color-gradient-accent2: #8ec07c;
+}
+/* .dark { */
+/*   --color-bg-accent: hsla(172, 67%, 70%, 1); */
+/*   --color-bg-primary: hsla(220, 26%, 14%, 1); */
+/*   --color-bg-secondary: hsla(220, 25%, 12%, 1); */
+/*   --color-bg-accent-hover: hsla(174, 59%, 56%, 1); */
+
+/*   --color-text-accent: hsla(172, 67%, 70%, 1); */
+/*   --color-text-primary: hsla(204, 45%, 98%, 1); */
+/*   --color-text-secondary: hsla(214, 32%, 91%, 1); */
+/*   --color-text-tertiary: hsla(214, 20%, 69%, 1); */
+/*   --color-text-on-accent: hsla(220, 26%, 14%, 1); */
+
+/*   --color-fill-primary: hsla(172, 67%, 70%, 1); */
+/*   --color-fill-secondary: hsla(220, 25%, 12%, 1); */
+
+/*   --color-gradient-accent1: hsla(209, 62%, 50%, 1); */
+/*   --color-gradient-accent2: hsla(174, 59%, 56%, 1); */
+/* } */
+
+@layer base {
+  body {
+    @apply font-mono;
+    transition: all 300ms ease 0s;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+
+  /* needed to override tailwind forms styles */
+  select {
+    @apply w-full px-4 py-2 bg-gray-900 border border-gray-200 rounded focus:outline-none focus:border-gray-900 text-primary dark:border-gray-800 dark:focus:border-gray-600 dark:bg-white bg-opacity-5 hover:bg-opacity-10 focus:ring-0;
+  }
+}
+
+@layer components {
+  .font-list-heading {
+    @apply font-sans text-lg font-bold text-primary;
+  }
+
+  .font-title-heading {
+    @apply font-sans text-2xl font-bold text-primary;
+  }
+
+  .tabbed-navigation::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Your own custom utilities */
+@layer utilities {
+  .text-primary {
+    /* @apply text-gray-900 dark:text-gray-100; */
+    color: var(--color-text-primary);
+  }
+
+  .text-secondary {
+    /* @apply text-gray-700 dark:text-gray-300; */
+    color: var(--color-text-secondary);
+  }
+
+  .text-tertiary {
+    /* @apply text-gray-500 dark:text-gray-500; */
+    color: var(--color-text-tertiary);
+  }
+
+  .text-quaternary {
+    /* @apply text-gray-400 dark:text-gray-600; */
+    color: var(--color-text-quaternary);
+  }
+
+  .bg-elevated {
+    @apply bg-gray-400 dark:bg-gray-50 bg-opacity-5;
+  }
+
+  .highlight-link-hover {
+    /* @apply px-0.5 -mx-0.5 no-underline md:hover:bg-yellow-400 rounded-sm md:dark:hover:bg-yellow-500 dark:bg-opacity-100 text-gray-900 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900; */
+    @apply px-0.5 -mx-0.5 no-underline;
+    @apply rounded-sm md:hover:bg-hover-accent;
+    /* @apply bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900; */
+    @apply text-primary;
+    @apply md:hover:text-on-accent; 
+  }
+
+  .highlight-link {
+    @apply px-0.5 -mx-0.5 no-underline bg-yellow-400 rounded dark:bg-gray-100 dark:bg-opacity-20 text-gray-900 dark:text-gray-300 bg-opacity-20 md:hover:bg-opacity-30 md:dark:hover:bg-yellow-500 md:dark:hover:bg-opacity-100 md:dark:hover:text-gray-900;
+  }
+}
