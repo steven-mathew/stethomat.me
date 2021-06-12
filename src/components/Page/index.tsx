@@ -2,6 +2,7 @@
 
 import {useRouter} from 'next/router'
 import React from 'react'
+import Header from '../Header'
 
 interface Props {
     children: React.ReactNode
@@ -13,6 +14,7 @@ export default function Page(props: Props) {
     const {children} = props
     return (
         <>
+            <Header />
             <div className="px-4 py-24 md:py-32 lg:px-0">{children}</div>
         </>
     )
