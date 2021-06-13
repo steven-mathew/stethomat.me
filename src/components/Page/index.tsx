@@ -1,22 +1,18 @@
-// From https://github.com/brianlovin/brian-lovin-next/tree/main/src/components
+// Inspired heavily by https://github.com/brianlovin/brian-lovin-next/tree/main/src/components/Page
 
-import {useRouter} from 'next/router'
 import React from 'react'
 import Header from '../Header'
-import Footer from '../Footer'
 
 interface Props {
     children: React.ReactNode
 }
 
 export default function Page(props: Props) {
-    const router = useRouter()
-    const {pathname} = router
     const {children} = props
     return (
         <>
             <Header />
-            <div className="px-4 py-24 md:py-32 lg:px-0">{children}</div>
+            <div className="h-screen px-4 py-24 md:py-32 lg:px-0">{children}</div>
         </>
     )
 }
