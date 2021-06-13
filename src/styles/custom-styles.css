@@ -12,12 +12,12 @@
 }
 
 ::-moz-selection {
-  background: var(--color-bg-accent);
+  background: var(--color-fill-tertiary);
   color: var(--color-text-on-accent);
 }
 
 ::selection {
-  background: var(--color-bg-accent);
+  background: var(--color-fill-tertiary);
   color: var(--color-text-on-accent);
 }
 
@@ -35,6 +35,7 @@
 
   --color-fill-primary: hsla(205, 79%, 83%, 1);
   --color-fill-secondary: hsla(210, 38%, 95%, 1);
+  --color-fill-tertiary: #fabd2f;
 
   --color-gradient-accent1: hsla(209, 62%, 50%, 1);
   --color-gradient-accent2: hsla(174, 59%, 56%, 1);
@@ -74,10 +75,12 @@ tempclassblahblahblah {
 
   --color-fill-primary: #fe8019;
   --color-fill-secondary: #3d3836;
+  --color-fill-tertiary: #d3869b;
 
   --color-gradient-accent1: #b8bb26;
   --color-gradient-accent2: #8ec07c;
 }
+
 /* .dark { */
 /*   --color-bg-accent: hsla(172, 67%, 70%, 1); */
 /*   --color-bg-primary: hsla(220, 26%, 14%, 1); */
