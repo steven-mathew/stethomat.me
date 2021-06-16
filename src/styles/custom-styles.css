@@ -6,6 +6,13 @@
   src: url('../../public/static/fonts/iAWriterQuattroV.ttf') format('truetype-variations');
 }
 
+@font-face {
+  font-family: 'blw';
+  /* font-stretch: 25% 150%; */
+  font-weight: 100 1000;
+  src: url('../../public/static/fonts/belwe-light-bt.ttf') format('truetype-variations');
+}
+
 :root {
     scroll-behavior: auto;
     @apply dark
@@ -121,6 +128,10 @@ tempclassblahblahblah {
 
   .font-title-heading {
     @apply font-sans text-2xl font-bold text-primary;
+  }
+
+  .font-welcome {
+    @apply font-serif text-4xl font-bold text-primary;
   }
 
   .tabbed-navigation::-webkit-scrollbar {
