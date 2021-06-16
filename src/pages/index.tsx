@@ -14,7 +14,7 @@ function Home() {
                             <svg
                                 aria-hidden="true"
                                 role="img"
-                                className="w-64 h-64 opacity-20"
+                                className="w-64 h-64 fill-current text-accent opacity-10"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 300 124"
                                 preserveAspectRatio="xMidYMin slice"
@@ -30,7 +30,7 @@ function Home() {
                         <div className="col-span-15">Hi there,</div>
                         <div className="col-span-15 col-start-1 col-end-15">I'm Steven Thomas Mathew —</div>
                         <div className="row-span-1"></div>
-                        <div className="col-span-15 col-start-2">yes, that's three last names.</div>
+                        <div className="col-span-15 col-start-2">yes, that's three <em>first</em> names.</div>
                     </div>
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">

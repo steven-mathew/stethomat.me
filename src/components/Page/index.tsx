@@ -12,7 +12,7 @@ export default function Page(props: Props) {
     return (
         <>
             <Header />
-            <div className="h-screen px-4 py-24 md:py-32 lg:px-0">{children}</div>
+            <div className="h-full px-4 py-24 md:py-32 lg:px-0">{children}</div>
         </>
     )
 }
