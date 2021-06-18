@@ -8,10 +8,10 @@ function MissingPage() {
     return (
         <Page>
             <CenteredColumn>
-                <div className="space-y-8">
+                <div className="h-screen space-y-8">
                     <PageHeader
                         title="404"
-                        subtitle="This page doesn’t exist. Try heading back home to start from the beginning."
+                        subtitle="This page doesn’t exist. We're sending help right away."
                     />
                     <div>
                         <Link href="/" passHref>

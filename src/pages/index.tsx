@@ -35,8 +35,8 @@ function Home() {
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
                             <p>
-                                Hey, I&apos;m Brian. I&apos;m a designer,{' '}
-                                <a href="https://designdetails.fm">podcaster</a>,{' '}
+                                I&apos;m a designer,{' '}
+                                <a href="https://designdetails.fm">ggg</a>,{' '}
                                 <Link href="/writing" passHref>
                                     <a>writer</a>
                                 </Link>

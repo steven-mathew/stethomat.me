@@ -1,8 +1,8 @@
 const colors = require('tailwindcss/colors')
 
 const mono = [
-    'ui-monospace',
     'SFMono-Regular',
+    'ui-monospace',
     'Menlo',
     'Monaco',
     'Consolas',
@@ -18,7 +18,7 @@ module.exports = {
             fontFamily: {
                 mono: ['"iA Quattro"', ...mono],
                 code: mono,
-                sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+                sans: 'Karla, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
                 serif: ['"blw"']
             },
             backgroundColor: {

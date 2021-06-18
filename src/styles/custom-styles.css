@@ -7,6 +7,13 @@
 }
 
 @font-face {
+  font-family: 'Karla';
+  /* font-stretch: 25% 150%; */
+  font-weight: 100 1000;
+  src: url('../../public/static/fonts/Karla-VariableFont_wght.ttf') format('truetype-variations');
+}
+
+@font-face {
   font-family: 'blw';
   /* font-stretch: 25% 150%; */
   font-weight: 100 1000;
@@ -89,9 +96,10 @@ tempclassblahblahblah {
   --color-bg-accent: #fb4934;
   --color-bg-primary: #0e1213;
   --color-bg-secondary: #3d3836;
-  --color-bg-accent-hover: #fabd2f; 
+  /* --color-bg-accent-hover: #fabd2f; */ 
+  --color-bg-accent-hover: #7fa580; 
 
-  --color-text-accent: #fabd2f;
+  --color-text-accent: #7fa580;
   --color-text-primary: #fbf1c7;
   --color-text-secondary: #ebdbb2;
   --color-text-tertiary: #d5c4a1;
@@ -100,7 +108,7 @@ tempclassblahblahblah {
 
   --color-fill-primary: #fe8019;
   --color-fill-secondary: #3d3836;
-  --color-fill-tertiary: #d3869b;
+  --color-fill-tertiary: #fabd2f;
 
   --color-gradient-accent1: #b8bb26;
   --color-gradient-accent2: #8ec07c;
@@ -127,7 +135,7 @@ tempclassblahblahblah {
 
 @layer base {
   body {
-    @apply font-mono;
+    @apply font-sans;
     transition: all 300ms ease 0s;
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
