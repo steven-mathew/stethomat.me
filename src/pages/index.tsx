@@ -28,9 +28,9 @@ function Home() {
                             </svg>
                         </div>
                         <div className="col-span-15">Hi there,</div>
-                        <div className="col-span-15 col-start-1 col-end-15">I'm Steven Thomas Mathew —</div>
+                        <div className="col-span-15 col-start-1 col-end-15">I&apos;m Steven Thomas Mathew —</div>
                         <div className="row-span-1"></div>
-                        <div className="col-span-15 col-start-2">yes, that's three <em>first</em> names.</div>
+                        <div className="col-span-15 col-start-2">yes, that&apos;s <em>three</em> "first" names.</div>
                     </div>
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
