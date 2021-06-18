@@ -8,13 +8,13 @@ function Home() {
     return (
         <Page>
             <CenteredColumn>
-                <div className="space-y-16 md:space-y-24">
-                    <div className="font-welcome grid grid-cols-15 grid-rows-4 gap-4">
+                <div className="space-y-12 md:space-y-16">
+                    <div className="font-welcome-lg grid grid-cols-15 grid-rows-4 gap-4">
                         <div className="absolute z-0 p-20">
                             <svg
                                 aria-hidden="true"
                                 role="img"
-                                className="w-64 h-64 fill-current text-accent opacity-10"
+                                className="w-48 h-48 fill-current lg:w-64 lg:h-64 text-accent opacity-10 transition duration-150 hover:opacity-20"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 300 124"
                                 preserveAspectRatio="xMidYMin slice"
@@ -35,51 +35,22 @@ function Home() {
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
                             <p>
-                                I&apos;m a designer,{' '}
-                                <a href="https://designdetails.fm">ggg</a>,{' '}
-                                <Link href="/writing" passHref>
-                                    <a>writer</a>
-                                </Link>
-                                , and{' '}
-                                <a href="https://github.com/brianlovin">software tinkerer</a>.
-                                I&apos;m currently building{' '}
-                                <a href="https://github.com/mobile">
-                                    native mobile apps at GitHub
-                                </a>
-                                .
+                                I&apos;ve just finished my second year @ UofT,
+                                expecting a specialist CS degree in May of 2023.
                             </p>
 
                             <p>
-                                In the past I co-founded{' '}
-                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
-                                a platform for online communities. Before that, I worked at
-                                Facebook building payments systems, and cut my teeth as a
-                                product designer at Buffer.
-                            </p>
-
-
-                            <p>
-                                In the past I co-founded{' '}
-                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
-                                a platform for online communities. Before that, I worked at
-                                Facebook building payments systems, and cut my teeth as a
-                                product designer at Buffer.
+                                As a {' '}
+                                <a href="https://github.com/steven-mathew">software tinkerer</a>,
+                                I develop modern production-ready applications in React.
+                                When I&apos;m not knee deep in mechanical keyboard videos,
+                                you&apos;ll find me writing open-source software or playing piano
+                                (currently studying Rachmaninow Sonata No. 2, Op. 36)
+                                and learning Rust by night.
                             </p>
 
                             <p>
-                                In the past I co-founded{' '}
-                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
-                                a platform for online communities. Before that, I worked at
-                                Facebook building payments systems, and cut my teeth as a
-                                product designer at Buffer.
-                            </p>
-
-                            <p>
-                                In the past I co-founded{' '}
-                                <a href="https://github.com/withspectrum/spectrum">Spectrum</a>,
-                                a platform for online communities. Before that, I worked at
-                                Facebook building payments systems, and cut my teeth as a
-                                product designer at Buffer.
+                                And to the recruiter, I'm on the hunt for internships.
                             </p>
                         </div>
                         <div className="flex space-x-4">
@@ -107,6 +78,15 @@ function Home() {
                         <Link href="/projects">
                             <a className="inline-block font-medium highlight-link-hover">
                                 See all projects &rarr;
+                            </a>
+                        </Link>
+                    </div>
+
+                    <div className="content-center space-y-8">
+                        <h4 className="font-list-heading">Let's get to know each other</h4>
+                        <Link href="/mailto:stethomat@protonmail.com">
+                            <a className="inline-block font-extrabold highlight-link-hover">
+                                stethomat@protonmail.com
                             </a>
                         </Link>
                     </div>

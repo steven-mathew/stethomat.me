@@ -157,7 +157,11 @@ tempclassblahblahblah {
   }
 
   .font-welcome {
-    @apply font-serif text-4xl font-bold text-primary;
+    @apply font-serif text-xl font-bold text-primary;
+  }
+
+  .font-welcome-lg {
+    @apply font-serif text-3xl font-bold text-primary;
   }
 
   .tabbed-navigation::-webkit-scrollbar {
