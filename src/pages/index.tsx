@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Page from '../components/Page'
 import {CenteredColumn} from '../components/Layouts'
 import Button from '../components/Button'
+import StackList from '../components/Projects'
 
 function Home() {
     return (
@@ -30,7 +31,7 @@ function Home() {
                         <div className="col-span-15">Hi there,</div>
                         <div className="col-span-15 col-start-1 col-end-15">I&apos;m Steven Thomas Mathew —</div>
                         <div className="row-span-1"></div>
-                        <div className="col-span-15 col-start-2">yes, that&apos;s <em>three</em> "first" names.</div>
+                        <div className="col-span-15 col-start-2">yes, that&apos;s <span className="text-accent"> <em>three</em> </span> "first" names and a single "t".</div>
                     </div>
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
@@ -50,7 +51,13 @@ function Home() {
                             </p>
 
                             <p>
-                                And to the recruiter, I'm on the hunt for internships.
+                                To the recruiter, I&apos;m on the hunt for internships.
+                                Feel free to download my {' '}
+                                <a href="https://github.com/steven-mathew">resume</a>,
+                                take a gander at my {' '}
+                                <a href="https://github.com/steven-mathew">GitHub</a>,
+                                or reach out to me by {' '}
+                                <a href="https://github.com/steven-mathew">email</a>.
                             </p>
                         </div>
                         <div className="flex space-x-4">
@@ -81,6 +88,8 @@ function Home() {
                             </a>
                         </Link>
                     </div>
+
+                    <StackList />
 
                     <div className="content-center space-y-8">
                         <h4 className="font-list-heading">Let's get to know each other</h4>
