@@ -2,13 +2,14 @@ export default [
   {
     name: 'read.me',
     url: 'https://github.com/steven-mathew/proj-readme',
-    image: '1password.png',
+    image: '1111.png',
     typescript: true,
     typeorm: true,
     tailwindcss: true,
     nextjs: true,
     nodejs: true,
     expressjs: true,
+    postgresql: true,
     description:
       'TODO',
   },

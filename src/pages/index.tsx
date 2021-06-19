@@ -41,8 +41,6 @@ function Home() {
                             </p>
 
                             <p>
-                                As a {' '}
-                                <a href="https://github.com/steven-mathew">software tinkerer</a>,
                                 I develop modern production-ready applications in React.
                                 When I&apos;m not knee deep in mechanical keyboard videos,
                                 you&apos;ll find me writing open-source software or playing piano

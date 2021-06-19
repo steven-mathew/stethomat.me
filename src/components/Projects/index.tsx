@@ -12,10 +12,11 @@ export default function StackList() {
     return (
         <div className="mt-8">
             {sorted.map((stack) => {
+                {/* TODO: Find an alternnative to this*/}
                 const hasBadges = stack.typescript || stack.tailwindcss ||
                     stack.nextjs || stack.rust || stack.nodejs ||
                     stack.opencv || stack.python || stack.typeorm ||
-                    stack.expressjs || stack.tensorflow
+                    stack.expressjs || stack.tensorflow || stack.postgresql
                 return (
                     <a
                         key={stack.name}
@@ -39,55 +40,60 @@ export default function StackList() {
                                 </p>
                             </div>
                             {hasBadges && (
-                                <div className="flex space-x-2">
+                                <div className="flex flex-1 text-center grid grid-flow-row sm:grid-cols-5 sm:grid-rows-2 grid-cols-2 auto-rows-max sm:auto-rows-min gap-2">
                                     {stack.typescript && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Indie
+                                            Typescript
+                                        </span>
+                                    )}
+                                    {stack.postgresql && (
+                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
+                                            PostgreSQL
                                         </span>
                                     )}
                                     {stack.tailwindcss && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Tailwind
                                         </span>
                                     )}
                                     {stack.nextjs && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Next.js
                                         </span>
                                     )}
                                     {stack.rust && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Rust
                                         </span>
                                     )}
                                     {stack.nodejs && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Node.js
                                         </span>
                                     )}
                                     {stack.opencv && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            OpenCV
                                         </span>
                                     )}
                                     {stack.python && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Python
                                         </span>
                                     )}
                                     {stack.typeorm && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            TypeORM
                                         </span>
                                     )}
                                     {stack.expressjs && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Express.js
                                         </span>
                                     )}
                                     {stack.tensorflow && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Open Source
+                                            Tensorflow
                                         </span>
                                     )}
                                 </div>
