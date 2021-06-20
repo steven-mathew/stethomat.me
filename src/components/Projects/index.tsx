@@ -62,7 +62,7 @@ export default function StackList() {
                                     )}
                                     {stack.nextjs && (
                                         <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.nextjs.color}5b`, color: '#1d2021c8', }}
+                                            style={{backgroundColor: `${TECHNOLOGIES.nextjs.color}2a`, color: `${TECHNOLOGIES.nextjs.color}`, }}
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.nextjs.name}

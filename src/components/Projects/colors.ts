@@ -9,7 +9,8 @@ export const TECHNOLOGIES = {
     },
     nextjs: {
         name: 'Next.js',
-        color: '#f1e05a',
+        color: '#F6BE00',
+        
     },
     rust: {
         name: 'Rust',
