@@ -41,7 +41,9 @@ function Home() {
                             </p>
 
                             <p>
-                                I develop modern production-ready applications in React.
+                                I develop modern production-ready applications in React,
+                                develop memory-safe tools to improve my programming workflow,
+                                and sometimes write my own programming languages.
                                 When I&apos;m not knee deep in mechanical keyboard videos,
                                 you&apos;ll find me writing open-source software or playing piano
                                 (currently studying Rachmaninow Sonata No. 2, Op. 36)

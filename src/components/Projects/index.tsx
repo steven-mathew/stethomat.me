@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import data from './data'
+import {TECHNOLOGIES} from './colors'
 
 export default function StackList() {
     const sorted = data.sort(function (a, b) {
@@ -12,11 +13,7 @@ export default function StackList() {
     return (
         <div className="mt-8">
             {sorted.map((stack) => {
-                {/* TODO: Find an alternnative to this*/}
-                const hasBadges = stack.typescript || stack.tailwindcss ||
-                    stack.nextjs || stack.rust || stack.nodejs ||
-                    stack.opencv || stack.python || stack.typeorm ||
-                    stack.expressjs || stack.tensorflow || stack.postgresql
+                const hasBadges = Object.keys(TECHNOLOGIES).some(prop => stack[prop])
                 return (
                     <a
                         key={stack.name}
@@ -41,59 +38,87 @@ export default function StackList() {
                             </div>
                             {hasBadges && (
                                 <div className="flex flex-1 text-center grid grid-flow-row sm:grid-cols-5 sm:grid-rows-2 grid-cols-2 auto-rows-max sm:auto-rows-min gap-2">
+                                    {/* TODO: Find an alternative to this*/}
                                     {stack.typescript && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Typescript
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.typescript.color}4b`, color: `${TECHNOLOGIES.typescript.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.typescript.name}
                                         </span>
                                     )}
                                     {stack.postgresql && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
-                                            PostgreSQL
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.postgresql.color}5b`, color: `${TECHNOLOGIES.postgresql.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.postgresql.name}
                                         </span>
                                     )}
                                     {stack.tailwindcss && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Tailwind
+                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
+                                            {TECHNOLOGIES.tailwindcss.name}
                                         </span>
                                     )}
                                     {stack.nextjs && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Next.js
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.nextjs.color}5b`, color: '#1d2021c8', }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.nextjs.name}
                                         </span>
                                     )}
                                     {stack.rust && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Rust
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.rust.color}5b`, color: `${TECHNOLOGIES.rust.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.rust.name}
                                         </span>
                                     )}
                                     {stack.nodejs && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Node.js
+                                            {TECHNOLOGIES.nodejs.name}
                                         </span>
                                     )}
                                     {stack.opencv && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            OpenCV
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.opencv.color}5b`, color: `${TECHNOLOGIES.opencv.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.opencv.name}
                                         </span>
                                     )}
                                     {stack.python && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Python
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.python.color}5f`, color: `${TECHNOLOGIES.python.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.python.name}
                                         </span>
                                     )}
                                     {stack.typeorm && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            TypeORM
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.typeorm.color}5b`, color: `${TECHNOLOGIES.typeorm.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.typeorm.name}
                                         </span>
                                     )}
                                     {stack.expressjs && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Express.js
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.expressjs.color}5b`, color: `${TECHNOLOGIES.expressjs.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.expressjs.name}
                                         </span>
                                     )}
                                     {stack.tensorflow && (
-                                        <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-green-400 dark:border-green-400 text-green-600 bg-green-500 bg-opacity-5 dark:bg-opacity-20">
-                                            Tensorflow
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.tensorflow.color}5b`, color: `${TECHNOLOGIES.tensorflow.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.tensorflow.name}
                                         </span>
                                     )}
                                 </div>
@@ -102,6 +127,6 @@ export default function StackList() {
                     </a>
                 )
             })}
-        </div>
+        </div >
     )
 }
