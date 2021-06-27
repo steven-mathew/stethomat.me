@@ -13,14 +13,14 @@ export default [
     description:
       'TODO',
   },
-  {
-    name: '1.1.1.1',
-    url: 'https://1.1.1.1',
-    image: '1111.png',
-    rust: true,
-    description: 
-      'TODO',
-  },
+  // {
+  //   name: '1.1.1.1',
+  //   url: 'https://1.1.1.1',
+  //   image: '1111.png',
+  //   rust: true,
+  //   description: 
+  //     'TODO',
+  // },
   {
     name: 'illuminote',
     url: 'https://github.com/steven-mathew/illuminote',

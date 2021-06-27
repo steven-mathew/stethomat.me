@@ -2,7 +2,6 @@ import * as React from 'react'
 import Link from 'next/link'
 import Page from '../components/Page'
 import {CenteredColumn} from '../components/Layouts'
-import Button from '../components/Button'
 import StackList from '../components/Projects'
 
 function Home() {
@@ -36,7 +35,7 @@ function Home() {
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
                             <p>
-                                I&apos;ve just finished my second year @ UofT,
+                                I&apos;ve just finished my second year <span className="text-accent"> @ </span> UofT,
                                 expecting a specialist CS degree in May of 2023.
                             </p>
 
@@ -44,9 +43,9 @@ function Home() {
                                 I develop modern production-ready applications in React,
                                 develop memory-safe tools to improve my programming workflow,
                                 and sometimes write my own programming languages.
-                                When I&apos;m not knee deep in mechanical keyboard videos,
+                                When I&apos;m not <em> knee deep </em> in mechanical keyboard videos,
                                 you&apos;ll find me writing open-source software or playing piano
-                                (currently studying Rachmaninow Sonata No. 2, Op. 36)
+                                (currently studying Rachmaninow Sonata No. 2, Op. 36) by day
                                 and learning Rust by night.
                             </p>
 
@@ -60,44 +59,48 @@ function Home() {
                                 <a href="https://github.com/steven-mathew">email</a>.
                             </p>
                         </div>
-                        <div className="flex space-x-4">
-                            <Link href="/about" passHref>
-                                <a>
-                                    <Button>Learn more about me</Button>
-                                </a>
-                            </Link>
-                            <a href="https://changelog.brianlovin.com">
-                                <Button>My changelog</Button>
-                            </a>
-                        </div>
-                    </div>
-                    <div className="space-y-8">
-                        <h4 className="font-list-heading">Recent Writing</h4>
-                        <Link href="/writing">
-                            <a className="inline-block font-medium highlight-link-hover">
-                                Read all posts &rarr;
-                            </a>
-                        </Link>
                     </div>
 
                     <div className="space-y-8">
-                        <h4 className="font-list-heading">Select Projects</h4>
-                        <Link href="/projects">
+                        <h4 className="mb-8 font-list-heading">Select Projects</h4>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/steven-mathew?tab=repositories">
                             <a className="inline-block font-medium highlight-link-hover">
                                 See all projects &rarr;
                             </a>
-                        </Link>
+                        </a>
                     </div>
 
                     <StackList />
 
-                    <div className="content-center space-y-8">
+                    <div className="space-y-8">
                         <h4 className="font-list-heading">Let's get to know each other</h4>
-                        <Link href="/mailto:stethomat@protonmail.com">
-                            <a className="inline-block font-extrabold highlight-link-hover">
-                                stethomat@protonmail.com
-                            </a>
-                        </Link>
+
+                        <div className="prose lg:prose-lg text-primary">
+                            <p>
+                                My inbox is always open to anything. If you have a question, a comment,
+                                or even a hilarious joke, I&apos;ll get back to you!
+                            </p>
+                        </div>
+
+                        <div className="flex justify-center">
+                            <Link href="/mailto:stethomat@protonmail.com">
+                                <a className="font-extrabold highlight-link-hover">
+                                    stethomat@protonmail.com
+                                </a>
+                            </Link>
+                        </div>
+
+                        <div className="p-8 mt-16 -mx-4 border-t border-b border-dashed bg-tertiary border-note space-y-4 md:-mx-8">
+                            <p className="font-semibold">
+                                Disclaimer
+                            </p>
+                            <p>
+                                If a joke is attached to the email, the
+                                joke <em> must </em> be hilarious. Jokes deemed to be non-hilarious will
+                                be placed in the Hall of Shame (TODO).
+                                Most importantly, don&apos;t forget to like, comment, and subscribe — oops!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </CenteredColumn>

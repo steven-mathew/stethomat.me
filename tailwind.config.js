@@ -25,6 +25,7 @@ module.exports = {
                 accent: 'var(--color-bg-accent)',
                 primary: 'var(--color-bg-primary)',
                 secondary: 'var(--color-bg-secondary)',
+                tertiary: 'var(--color-bg-tertiary)',
                 hover: {
                     accent: 'var(--color-bg-accent-hover)',
                 },
@@ -48,6 +49,7 @@ module.exports = {
             borderColor: {
                 accent: 'var(--color-text-accent)',
                 subtle: 'var(--color-bg-secondary)',
+                note: 'var(--color-border-note)',
             },
             letterSpacing: {
                 widestest: '0.2em',
