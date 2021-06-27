@@ -43,12 +43,13 @@ function Home() {
                                 I develop modern production-ready applications in React,
                                 develop memory-safe tools to improve my programming workflow,
                                 and sometimes write my own programming languages.
+                            </p>
+                            <p>
                                 When I&apos;m not <em> knee deep </em> in mechanical keyboard videos,
                                 you&apos;ll find me writing open-source software or playing piano
                                 (currently studying Rachmaninow Sonata No. 2, Op. 36) by day
                                 and learning Rust by night.
                             </p>
-
                             <p>
                                 To the recruiter, I&apos;m on the hunt for internships.
                                 Feel free to download my {' '}
