@@ -81,25 +81,6 @@
   --color-gradient-accent2: #8ec07c;
 }
 
-/* .dark { */
-/*   --color-bg-accent: hsla(172, 67%, 70%, 1); */
-/*   --color-bg-primary: hsla(220, 26%, 14%, 1); */
-/*   --color-bg-secondary: hsla(220, 25%, 12%, 1); */
-/*   --color-bg-accent-hover: hsla(174, 59%, 56%, 1); */
-
-/*   --color-text-accent: hsla(172, 67%, 70%, 1); */
-/*   --color-text-primary: hsla(204, 45%, 98%, 1); */
-/*   --color-text-secondary: hsla(214, 32%, 91%, 1); */
-/*   --color-text-tertiary: hsla(214, 20%, 69%, 1); */
-/*   --color-text-on-accent: hsla(220, 26%, 14%, 1); */
-
-/*   --color-fill-primary: hsla(172, 67%, 70%, 1); */
-/*   --color-fill-secondary: hsla(220, 25%, 12%, 1); */
-
-/*   --color-gradient-accent1: hsla(209, 62%, 50%, 1); */
-/*   --color-gradient-accent2: hsla(174, 59%, 56%, 1); */
-/* } */
-
 @layer base {
   body {
     @apply font-sans;
