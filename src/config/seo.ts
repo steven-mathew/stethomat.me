@@ -1,21 +1,21 @@
 // Inspired heavily by https://github.com/brianlovin/brian-lovin-next/blob/main/src/config/seo.ts 
 
-export const baseUrl = 'https://read.me'
-export const baseEmail = 'hi@read.me'
+export const baseUrl = 'https://stethomat.me'
+export const baseEmail = 'stethomat@protonmail.com'
 
 export const defaultSEO = {
-  title: 'readme',
+  title: 'Steven Mathew',
   description:
-    'A space for your work.',
+    'TODO',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    site_name: 'readme',
+    site_name: 'Steven Mathew',
     images: [
       {
         // url: `${baseUrl}/static/meta/og-image.png`,
-        alt: 'readme',
+        alt: 'Steven Mathew',
       },
     ],
   },
