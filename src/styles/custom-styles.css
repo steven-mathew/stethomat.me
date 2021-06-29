@@ -35,6 +35,30 @@
   color: var(--color-text-on-accent);
 }
 
+.text-intro {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+/* .text-bg-lg { */
+/*   position: relative; */
+/*   z-index: 1; */
+/* } */
+
+/* .text-bg-lg::after { */
+/*   color: attr(--color-bg-accent); */
+/*   opacity: 0.05; */
+/*   content: attr(data-bg-text); */
+/*   font-size: 23vw; */
+/*   transition: color 0.5 ease; */
+/*   position:absolute; */
+/*   margin-top:5vh; */
+/*   z-index: -1; */
+/* } */
+
 .light {
   --color-bg-accent: hsla(205, 79%, 66%, 1);
   --color-bg-primary: hsla(0, 100%, 100%, 1);

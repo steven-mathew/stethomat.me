@@ -9,7 +9,7 @@ function Home() {
         <Page>
             <CenteredColumn>
                 <div className="space-y-12 md:space-y-16">
-                    <div className="font-welcome-lg grid grid-cols-15 grid-rows-4 gap-4">
+                    <div className="font-welcome-lg grid grid-cols-15 grid-rows-4 gap-4 text-intro">
                         <div className="absolute z-0 p-20">
                             <svg
                                 aria-hidden="true"
@@ -32,7 +32,7 @@ function Home() {
                         <div className="row-span-1"></div>
                         <div className="col-span-15 col-start-2">yes, that&apos;s <span className="text-accent"> <em>three</em> </span> "first" names and a single "t".</div>
                     </div>
-                    <div className="space-y-8 md:items-center">
+                    <div className="space-y-8 md:items-center text-bg-lg" data-bg-text="STEVEN">
                         <div className="prose lg:prose-lg text-primary">
                             <p>
                                 I&apos;ve just finished my second year <span className="text-accent"> @ </span> UofT,
