@@ -14,7 +14,7 @@ function Home() {
                             <svg
                                 aria-hidden="true"
                                 role="img"
-                                className="w-48 h-48 fill-current lg:w-64 lg:h-64 text-accent opacity-10 transition duration-150 hover:opacity-20"
+                                className="w-48 h-48 fill-current lg:w-64 lg:h-64 text-accent opacity-10"
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 300 124"
                                 preserveAspectRatio="xMidYMin slice"
@@ -41,7 +41,7 @@ function Home() {
 
                             <p>
                                 I develop modern production-ready applications in React,
-                                develop memory-safe tools to improve my programming workflow,
+                                memory-safe tools to improve my programming workflow,
                                 and sometimes write my own programming languages.
                             </p>
                             <p>
@@ -57,7 +57,7 @@ function Home() {
                                 take a gander at my {' '}
                                 <a href="https://github.com/steven-mathew">GitHub</a>,
                                 or reach out to me by {' '}
-                                <a href="https://github.com/steven-mathew">email</a>.
+                                <a href="mailto:stethomat@protonmail.com">email</a>.
                             </p>
                         </div>
                     </div>
@@ -84,23 +84,28 @@ function Home() {
                         </div>
 
                         <div className="flex justify-center">
-                            <Link href="/mailto:stethomat@protonmail.com">
-                                <a className="font-extrabold highlight-link-hover">
-                                    stethomat@protonmail.com
-                                </a>
-                            </Link>
+                            <a className="font-extrabold highlight-link-hover" href="mailto:stethomat@protonmail.com">
+                                stethomat@protonmail.com
+                            </a>
                         </div>
 
                         <div className="p-8 mt-16 -mx-4 border-t border-b border-dashed bg-tertiary border-note space-y-4 md:-mx-8">
                             <p className="font-semibold">
                                 Disclaimer
                             </p>
-                            <p>
-                                If a joke is attached to the email, the
-                                joke <em> must </em> be hilarious. Jokes deemed to be non-hilarious will
-                                be placed in the Hall of Shame (TODO).
-                                Most importantly, don&apos;t forget to like, comment, and subscribe — oops!
-                            </p>
+                            <div className="prose text-primary">
+                                <p>
+                                    If a joke is attached to the email, the
+                                    joke <em> must </em> be hilarious.
+                                    Jokes deemed to be non-hilarious will be placed in the{' '}
+                                    <Link href="/shame" passHref>
+                                        <a>Hall of Shame</a>
+                                    </Link>
+                                    .
+                                    {' '}
+                                    Most importantly, don&apos;t forget to like, comment, and subscribe — oops!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
