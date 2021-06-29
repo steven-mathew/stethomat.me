@@ -32,7 +32,7 @@ function Home() {
                         <div className="row-span-1"></div>
                         <div className="col-span-15 col-start-2">yes, that&apos;s <span className="text-accent"> <em>three</em> </span> "first" names and a single "t".</div>
                     </div>
-                    <div className="space-y-8 md:items-center text-bg-lg" data-bg-text="STEVEN">
+                    <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
                             <p>
                                 I&apos;ve just finished my second year <span className="text-accent"> @ </span> UofT,
