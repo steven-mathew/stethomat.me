@@ -22,7 +22,7 @@ export default function JokesList() {
                 </p>
                 <div className="prose text-primary">
                     <p>
-                        If you&apos;d have an actual
+                        If you have an actual
                         hilarious joke, please email me at{' '}
                         <a href="mailto:ste.tho.mat@gmail.com">ste.tho.mat@gmail.com</a>
                         .
