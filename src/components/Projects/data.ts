@@ -51,12 +51,12 @@ export default [
       'A Java application that uses Minimax and Alpha-Beta Pruning to create artificial intelligence to play Othello.',
   },
   {
-    name: 'knn',
+    name: 'knn Handwriting Prediction',
     url: 'https://github.com/steven-mathew/kNN-predict',
     image: 'knn.png',
     c: true, 
     description:
-      'A handwriting recognition CLI using kNN.',
+      'A handwriting recognition CLI using k-nearest-neighbours. It achieves an accuracy of 96.94% on a dataset of 10,000 images.',
   },
   {
     name: 'Competitive Programming',
@@ -66,7 +66,7 @@ export default [
     cplusplus: true,
     python: true,
     description:
-      'A repository containing over 400 competitive programming solutions to onlinejudges such as Codeforces, DMOJ, and Leetcode written in C++, Java, and Python.',
+      'A repository containing over 400 competitive programming solutions to online judges such as Codeforces, DMOJ, and Leetcode written in C++, Java, and Python.',
   },
   {
     name: 'Personal Website',
