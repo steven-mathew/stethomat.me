@@ -47,14 +47,6 @@ export default function StackList() {
                                             {TECHNOLOGIES.typescript.name}
                                         </span>
                                     )}
-                                    {stack.postgresql && (
-                                        <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.postgresql.color}5b`, color: `${TECHNOLOGIES.postgresql.color}`, }}
-                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
-                                        >
-                                            {TECHNOLOGIES.postgresql.name}
-                                        </span>
-                                    )}
                                     {stack.tailwindcss && (
                                         <span className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide dark:text-purple-400 dark:border-purple-400 text-purple-600 bg-purple-500 bg-opacity-5 dark:bg-opacity-20">
                                             {TECHNOLOGIES.tailwindcss.name}
@@ -66,14 +58,6 @@ export default function StackList() {
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.nextjs.name}
-                                        </span>
-                                    )}
-                                    {stack.rust && (
-                                        <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.rust.color}5b`, color: `${TECHNOLOGIES.rust.color}`, }}
-                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
-                                        >
-                                            {TECHNOLOGIES.rust.name}
                                         </span>
                                     )}
                                     {stack.nodejs && (
@@ -95,14 +79,6 @@ export default function StackList() {
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.python.name}
-                                        </span>
-                                    )}
-                                    {stack.typeorm && (
-                                        <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.typeorm.color}3b`, color: `${TECHNOLOGIES.typeorm.color}`, }}
-                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
-                                        >
-                                            {TECHNOLOGIES.typeorm.name}
                                         </span>
                                     )}
                                     {stack.expressjs && (
