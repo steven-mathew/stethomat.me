@@ -53,7 +53,7 @@ function Home() {
                             <p>
                                 To the recruiter, I&apos;m on the hunt for internships.
                                 Feel free to download my {' '}
-                                <a href="https://github.com/steven-mathew">resume</a>,
+                                <a href="/static/resume.pdf">resume</a>,
                                 take a gander at my {' '}
                                 <a href="https://github.com/steven-mathew">GitHub</a>,
                                 or reach out to me by {' '}
