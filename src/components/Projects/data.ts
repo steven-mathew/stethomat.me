@@ -1,18 +1,18 @@
 export default [
-  {
-    name: 'read.me',
-    url: 'https://github.com/steven-mathew/proj-readme',
-    image: '1111.png',
-    typescript: true,
-    typeorm: true,
-    tailwindcss: true,
-    nextjs: true,
-    nodejs: true,
-    expressjs: true,
-    postgresql: true,
-    description:
-      'TODO',
-  },
+  // {
+  //   name: 'read.me',
+  //   url: 'https://github.com/steven-mathew/proj-readme',
+  //   image: '1111.png',
+  //   typescript: true,
+  //   typeorm: true,
+  //   tailwindcss: true,
+  //   nextjs: true,
+  //   nodejs: true,
+  //   expressjs: true,
+  //   postgresql: true,
+  //   description:
+  //     'TODO',
+  // },
   // {
   //   name: '1.1.1.1',
   //   url: 'https://1.1.1.1',
@@ -24,7 +24,7 @@ export default [
   {
     name: 'illuminote',
     url: 'https://github.com/steven-mathew/illuminote',
-    image: 'contrast.png',
+    image: 'illuminote.png',
     python: true,
     opencv: true,
     description:
@@ -33,13 +33,51 @@ export default [
   {
     name: 'argus.',
     url: 'https://github.com/steven-mathew/argus-accidents',
-    image: 'copilot.png',
+    image: 'argus.png',
     opencv: true, 
     tensorflow: true,
     nodejs: true,
     expressjs: true,
     description:
       'Real-time accident monitoring and reporting.',
+  },
+  {
+    name: 'Othello/Reversi',
+    url: 'https://github.com/steven-mathew/othello-javafx',
+    image: 'othello.png',
+    java: true, 
+    javafx: true, 
+    description:
+      'A Java application that uses Minimax and Alpha-Beta Pruning to create artificial intelligence to play Othello.',
+  },
+  {
+    name: 'knn',
+    url: 'https://github.com/steven-mathew/kNN-predict',
+    image: 'knn.png',
+    c: true, 
+    description:
+      'A handwriting recognition CLI using kNN.',
+  },
+  {
+    name: 'Competitive Programming',
+    url: 'https://github.com/steven-mathew/contest-problems',
+    image: 'comp.png',
+    java: true, 
+    cplusplus: true,
+    python: true,
+    description:
+      'A repository containing over 400 competitive programming solutions to onlinejudges such as Codeforces, DMOJ, and Leetcode written in C++, Java, and Python.',
+  },
+  {
+    name: 'Personal Website',
+    url: 'https://github.com/steven-mathew/stethomat.me',
+    image: 'website.png',
+    typescript: true,
+    tailwindcss: true,
+    nextjs: true,
+    nodejs: true,
+    description:
+      'You\'re looking at it!',
   },
 ]
 

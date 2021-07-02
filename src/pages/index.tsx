@@ -30,7 +30,7 @@ function Home() {
                         <div className="col-span-15">Hi there,</div>
                         <div className="col-span-15 col-start-1 col-end-15">I&apos;m Steven Thomas Mathew —</div>
                         <div className="row-span-1"></div>
-                        <div className="col-span-15 col-start-2">yes, that&apos;s <span className="text-accent"> <em>three</em> </span> "first" names and a single "t".</div>
+                        <div className="col-span-15 col-start-2">yes, that&apos;s <span className="text-accent"> <em>three</em> </span> first names and a single "t".</div>
                     </div>
                     <div className="space-y-8 md:items-center">
                         <div className="prose lg:prose-lg text-primary">
@@ -57,7 +57,7 @@ function Home() {
                                 take a gander at my {' '}
                                 <a href="https://github.com/steven-mathew">GitHub</a>,
                                 or reach out to me by {' '}
-                                <a href="mailto:stethomat@protonmail.com">email</a>.
+                                <a href="mailto:ste.tho.mat@gmail.com">email</a>.
                             </p>
                         </div>
                     </div>

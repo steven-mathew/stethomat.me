@@ -44,4 +44,20 @@ export const TECHNOLOGIES = {
         name: 'PostgreSQL',
         color: '#326890',
     },
+    c: {
+        name: 'C',
+        color: '#555555',
+    },
+    java: {
+        name: 'Java',
+        color: '#b07219',
+    },
+    javafx: {
+        name: 'JavaFX',
+        color: '#537c96',
+    },
+    cplusplus: {
+        name: 'C++',
+        color: '#6866fb',
+    }
 }

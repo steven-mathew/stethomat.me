@@ -29,7 +29,7 @@ export default function StackList() {
                             className="border border-gray-100 rounded-xl dark:border-gray-900 flex-0"
                         />
 
-                        <div className="justify-center flex-1 pl-5 col-span-3 space-y-2 ">
+                        <div className="justify-center flex-1 pl-5 col-span-3 space-y-2">
                             <div className="space-y-1 ">
                                 <p className="mt-2 font-medium text-primary">{stack.name}</p>
                                 <p className="text-base font-normal leading-snug text-tertiary">
@@ -83,7 +83,7 @@ export default function StackList() {
                                     )}
                                     {stack.opencv && (
                                         <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.opencv.color}5b`, color: `${TECHNOLOGIES.opencv.color}`, }}
+                                            style={{backgroundColor: `${TECHNOLOGIES.opencv.color}3a`, color: `${TECHNOLOGIES.opencv.color}`, }}
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.opencv.name}
@@ -99,7 +99,7 @@ export default function StackList() {
                                     )}
                                     {stack.typeorm && (
                                         <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.typeorm.color}5b`, color: `${TECHNOLOGIES.typeorm.color}`, }}
+                                            style={{backgroundColor: `${TECHNOLOGIES.typeorm.color}3b`, color: `${TECHNOLOGIES.typeorm.color}`, }}
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.typeorm.name}
@@ -107,7 +107,7 @@ export default function StackList() {
                                     )}
                                     {stack.expressjs && (
                                         <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.expressjs.color}5b`, color: `${TECHNOLOGIES.expressjs.color}`, }}
+                                            style={{backgroundColor: `${TECHNOLOGIES.expressjs.color}2c`, color: `${TECHNOLOGIES.expressjs.color}`, }}
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.expressjs.name}
@@ -115,10 +115,42 @@ export default function StackList() {
                                     )}
                                     {stack.tensorflow && (
                                         <span
-                                            style={{backgroundColor: `${TECHNOLOGIES.tensorflow.color}5b`, color: `${TECHNOLOGIES.tensorflow.color}`, }}
+                                            style={{backgroundColor: `${TECHNOLOGIES.tensorflow.color}3b`, color: `${TECHNOLOGIES.tensorflow.color}`, }}
                                             className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
                                         >
                                             {TECHNOLOGIES.tensorflow.name}
+                                        </span>
+                                    )}
+                                    {stack.java && (
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.java.color}3b`, color: `${TECHNOLOGIES.java.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.java.name}
+                                        </span>
+                                    )}
+                                    {stack.javafx && (
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.javafx.color}3b`, color: `${TECHNOLOGIES.javafx.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.javafx.name}
+                                        </span>
+                                    )}
+                                    {stack.c && (
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.c.color}3b`, color: `${TECHNOLOGIES.c.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.c.name}
+                                        </span>
+                                    )}
+                                    {stack.cplusplus && (
+                                        <span
+                                            style={{backgroundColor: `${TECHNOLOGIES.cplusplus.color}3b`, color: `${TECHNOLOGIES.cplusplus.color}`, }}
+                                            className="self-start rounded px-3 py-0.5 text-sm font-medium leading-5 tracking-wide"
+                                        >
+                                            {TECHNOLOGIES.cplusplus.name}
                                         </span>
                                     )}
                                 </div>
