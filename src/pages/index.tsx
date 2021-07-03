@@ -84,8 +84,8 @@ function Home() {
                         </div>
 
                         <div className="flex justify-center">
-                            <a className="font-extrabold highlight-link-hover" href="mailto:stethomat@protonmail.com">
-                                stethomat@protonmail.com
+                            <a className="font-extrabold highlight-link-hover" href="mailto:ste.tho.mat@gmail.com">
+                                ste.tho.mat@gmail.com
                             </a>
                         </div>
 

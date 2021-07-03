@@ -17,7 +17,7 @@ export default function Shame() {
             />
 
             <CenteredColumn>
-                <div className="h-screen space-y-8">
+                <div className="h-full space-y-8">
                     <Link href="/" passHref>
                         <a className="leading-snug text-tertiary hover:text-accent">
                             &larr; Take me home
