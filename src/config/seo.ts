@@ -6,7 +6,7 @@ export const baseEmail = 'stethomat@protonmail.com'
 export const defaultSEO = {
   title: 'Steven Mathew',
   description:
-    'TODO',
+    'Developer with \"three\" first names and a single \"t\".',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -14,7 +14,7 @@ export const defaultSEO = {
     site_name: 'Steven Mathew',
     images: [
       {
-        // url: `${baseUrl}/static/meta/og-image.png`,
+        url: `${baseUrl}/static/meta/og-image.png`,
         alt: 'Steven Mathew',
       },
     ],
