@@ -1,12 +1,12 @@
 // Inspired heavily by https://github.com/brianlovin/brian-lovin-next/blob/main/src/config/seo.ts 
 
 export const baseUrl = 'https://stethomat.me'
-export const baseEmail = 'stethomat@protonmail.com'
+export const baseEmail = 'ste.tho.mat@gmail.com'
 
 export const defaultSEO = {
   title: 'Steven Mathew',
   description:
-    'Developer with \"three\" first names and a single \"t\".',
+    'Developer with \"three\" first names and a single \"t\". I\'m Steven Thomas Mathew and why don\'t you stop by.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
