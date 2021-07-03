@@ -9,7 +9,7 @@ const jokes = [
     },
     {
         description: 'Good steak puns are a rare medium well done.',
-        response: 'This one makes me sad. How can steak be rare, medium, and well done? These temperatures are mutaully exclusive. Not well done.',
+        response: 'This one makes me sad. How can steak be rare, medium, and well done? These temperatures are mutually exclusive. Not well done.',
     },
     {
         description: 'What\'s the difference between a spring roll and a summer roll? Seasoning.',
