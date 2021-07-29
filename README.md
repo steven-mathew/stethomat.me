@@ -7,6 +7,6 @@ Powered on [brian-lovin-next](https://github.com/brianlovin/brian-lovin-next/tre
 ```bash
 git clone https://github.com/steven-mathew/stethomat.me 
 cd stethomat.me 
-yarn
-yarn dev
+npm
+npm run dev
 ```
