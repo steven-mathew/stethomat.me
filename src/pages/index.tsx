@@ -1,10 +1,20 @@
 import * as React from 'react'
 import Link from 'next/link'
+import {GetStaticProps} from 'next';
+
 import Page from '../components/Page'
 import {CenteredColumn} from '../components/Layouts'
 import StackList from '../components/Projects'
 
-function Home() {
+import {format, parseISO} from 'date-fns';
+import {getAllPosts} from '../pages/api/getPosts'
+import {PostType} from '../types/post'
+
+type IndexProps = {
+    posts: PostType[];
+};
+
+function Home({posts}: IndexProps) {
     return (
         <Page>
             <CenteredColumn>
@@ -71,6 +81,28 @@ function Home() {
                         </a>
                     </div>
 
+                    <h4 className="font-list-heading">Select Writings</h4>
+                    {posts.map((post) => (
+                        <article key={post.slug} className="mt-8">
+                            <p className="mb-1 text-sm text-gray-500">
+                                {format(parseISO(post.date), 'MMMM dd, yyyy')}
+                            </p>
+                            <h1 className="mb-2 text-xl">
+                                <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                                    <a className="text-tertiary hover:text-accent">
+                                        {post.title}
+                                    </a>
+                                </Link>
+                            </h1>
+                            <p className="mb-3">{post.description}</p>
+                            <p>
+                                <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+                                    <a className="hover:text-accent">Read More</a>
+                                </Link>
+                            </p>
+                        </article>
+                    ))}
+
                     <StackList />
 
                     <div className="space-y-8">
@@ -110,8 +142,16 @@ function Home() {
                     </div>
                 </div>
             </CenteredColumn>
-        </Page>
+        </Page >
     )
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+    const posts = getAllPosts(['date', 'description', 'slug', 'title']);
+
+    return {
+        props: {posts},
+    };
+};
 
 export default Home
