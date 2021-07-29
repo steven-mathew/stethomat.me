@@ -95,4 +95,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
     };
 };
 
-export default PostPage;
+export default PostPage

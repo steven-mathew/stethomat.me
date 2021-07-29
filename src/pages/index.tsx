@@ -72,14 +72,6 @@ function Home({posts}: IndexProps) {
                         </div>
                     </div>
 
-                    <div className="space-y-8">
-                        <h4 className="mb-8 font-list-heading">Select Projects</h4>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/steven-mathew?tab=repositories">
-                            <a className="inline-block font-medium highlight-link-hover">
-                                See all projects &rarr;
-                            </a>
-                        </a>
-                    </div>
 
                     <h4 className="font-list-heading">Select Writings</h4>
                     {posts.map((post) => (
@@ -103,6 +95,14 @@ function Home({posts}: IndexProps) {
                         </article>
                     ))}
 
+                    <div className="space-y-8">
+                        <h4 className="mb-8 font-list-heading">Select Projects</h4>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/steven-mathew?tab=repositories">
+                            <a className="inline-block font-medium highlight-link-hover">
+                                See all projects &rarr;
+                            </a>
+                        </a>
+                    </div>
                     <StackList />
 
                     <div className="space-y-8">

@@ -31,7 +31,7 @@ const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
                     </p>
                     <div className="prose text-primary">
                         <p>
-                            If something was off or you need some clarification,
+                            If something is off or you need some clarification,
                             please email me at{' '}
                             <button
                                 onClick={() => navigator.clipboard.writeText('ste.tho.mat@gmail.com')}
@@ -49,5 +49,3 @@ const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
 }
 
 export default Layout
-
-

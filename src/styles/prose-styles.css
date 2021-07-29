@@ -16,7 +16,7 @@
 }
 
 .prose a {
-  @apply px-0.5 mx-2 font-medium no-underline break-words;
+  @apply font-medium no-underline break-words;
   @apply text-primary;
   @apply bg-secondary;
   @apply md:hover:bg-hover-accent;
