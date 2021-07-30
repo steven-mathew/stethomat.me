@@ -1,0 +1,18 @@
+---
+title: What is Kademlia? (A gentle introduction) [WIP]
+description: Documenting my journey in studying the Kademlia paper, the peer-to-peer ditributed hash table. 
+date: '2021-07-29'
+---
+
+> We describe a peer-to-peer system which has provable consistency and performance in a fault-prone
+environment. Our system routes queries and locates
+nodes using a novel XOR-based metric topology that
+simplifies the algorithm and facilitates our proof.
+The topology has the property that every message
+exchanged conveys or reinforces useful contact information. The system exploits this information to
+send parallel, asynchronous query messages that tolerate node failures without imposing timeout delays
+on users.
+
+Even the abstract from the [Kademlia](http://css.csail.mit.edu/6.824/2014/papers/kademlia.pdf) paper
+is a lot to digest and I think we can say there's not going to be *any* hand-holding. 
+Accordingly, this blog will serve as a collection of my thoughts.
