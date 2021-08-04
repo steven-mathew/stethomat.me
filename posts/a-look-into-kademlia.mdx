@@ -25,12 +25,12 @@ h : \{0, 1, ..., u - 1\} \to \{0, 1, ..., m -1\} = K.
 $$
 
 for $u < m$. In words, $h$ reduces a universe 
-$\mathbb{U}$ with $u$ 
+$\mathcal{U}$ with $u$ 
 many keys to $m$. 
 
 Next, a *collision* occurs whenever 
 $h(k_i) = h(k_j)$
-for two keys $k_i \neq k_j \in \mathbb{U}$.
+for two keys $k_i \neq k_j \in \mathcal{U}$.
 A well-behaved hash function avoids collisions.
 
 A hashmap $H$ supports $\verb|put|(key, val)$ and 
