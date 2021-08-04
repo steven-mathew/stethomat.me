@@ -42,6 +42,7 @@ const PostPage = ({source, frontMatter}: PostPageProps): JSX.Element => {
         description: frontMatter.description,
         image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
         date: frontMatter.date,
+        edited: frontMatter.edited,
         type: 'article',
     };
 
@@ -61,8 +62,11 @@ const PostPage = ({source, frontMatter}: PostPageProps): JSX.Element => {
                 <h1 className="mb-3 text-xl font-black md:text-2xl text-primary">
                     {frontMatter.title}
                 </h1>
-                <p className="mb-10 text-sm leading-snug text-tertiary">
+                <p className="text-sm leading-snug text-tertiary">
                     {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
+                </p>
+                <p className="mb-10 text-sm leading-snug text-tertiary">
+                    Edited {format(parseISO(frontMatter.edited), 'MMMM dd, yyyy')}
                 </p>
                 <div className="prose dark:prose-dark">
                     <MDXRemote {...source} components={components} />
