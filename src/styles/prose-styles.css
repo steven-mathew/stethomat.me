@@ -3,6 +3,10 @@
   color: var(--color-text-primary);
 }
 
+.katex {
+    font-size: 1.1em;
+}
+
 .prose blockquote {
   @apply font-normal border-l-2 border-gray-200 dark:border-gray-800 dark:text-gray-400;
 }
