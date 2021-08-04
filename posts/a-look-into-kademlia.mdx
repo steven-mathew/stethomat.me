@@ -1,7 +1,7 @@
 ---
 title: What is Kademlia? (A somewhat gentle introduction) [WIP]
 description: Documenting my journey in studying the Kademlia paper, the peer-to-peer ditributed hash table. 
-date: '2021-07-29'
+date: '2021-08-04'
 ---
 
 > We describe a peer-to-peer system which has provable consistency and performance in a fault-prone
@@ -17,7 +17,7 @@ Even the abstract from the [Kademlia](http://css.csail.mit.edu/6.824/2014/papers
 is a lot to digest and I think we can say there's not going to be *any* hand-holding. 
 Accordingly, this blog will serve as a collection of my thoughts.
 
-### Review of the friendly hash table
+### An overview of the hash table
 Firstly, a hash function is a map $h$ such that
 
 $$
@@ -25,25 +25,51 @@ h : \{0, 1, ..., u - 1\} \to \{0, 1, ..., m -1\} = K.
 $$
 
 for $u < m$. In words, $h$ reduces a universe 
-$\mathcal{U}$ with $u$ 
-many keys to $m$. 
+$\mathcal{U}$ with $u$-many keys to $m$-many buckets. 
 
 Next, a *collision* occurs whenever 
 $h(k_i) = h(k_j)$
 for two keys $k_i \neq k_j \in \mathcal{U}$.
 A well-behaved hash function avoids collisions.
+Specifically, the authors of Kademlia propose SHA-1
+with a keyspace ($\mathcal{U}$ in our model) of 160 bits.
 
-A hashmap $H$ supports $\verb|put|(key, val)$ and 
-$\verb|get|(key)$. 
-
-The former takes a key $k$ and stores value $v$
+Abstractly, a hashmap $H$ supports $\verb|put|(key, val)$ and 
+$\verb|get|(key)$. The former takes a key $k$ and stores value $v$
 in bucket $H[h(k)]$ and the latter returns 
 $H[h(k)]$. 
 
+The upshot of this datastructure is fantastic
+lookup times (constant on average), but sometimes
+we need to store **LARGE** values. 
+Accordingly, we can store parts of the map
+on separate computers. 
+
+A centralized computer, much
+like the director of a play, decides which keys
+of the hashmap go to which computer. But say
+the director decides to quit the play,
+we've lost access to the values in our hashmap and 
+this map is not particularly resilient.
+
 ### What is a distributed hash table anyways?
 
-Much like the traditional hashmap $H$, DHT 
+Enter the distributed hash table. Much like the
+traditional hashmap, DHT 
 also supports $\verb|put|(key, val)$ and 
-$\verb|get|(key)$.
+$\verb|get|(key)$. But it is fault-tolerant because 
+if a computer leaves the network, we can still access 
+the map. There are actually some degrees on 
+fault-tolerance that I've grazed over (FIXME: 
+attach reading on byzantine fault tolerance). 
 
+Now, it would be wonderful if we had a protocol 
+that partitions our map to many computers without
+a director. This is precisely what Kademlia proposes.
 
+### Where do we go from here?
+
+TODO
+
+In my next blog posts, I'll go over the how and why
+of Kademlia. 
