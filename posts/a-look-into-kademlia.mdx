@@ -21,7 +21,7 @@ Accordingly, this blog will serve as a collection of my thoughts.
 Firstly, a hash function is a map $h$ such that
 
 $$
-h : {0, 1, ..., u - 1} \to {0, 1, ..., m -1} = K.
+h : \{0, 1, ..., u - 1\} \to \{0, 1, ..., m -1\} = K.
 $$
 
 for $u < m$. In words, $h$ reduces a universe 
@@ -30,8 +30,8 @@ many keys to $m$.
 
 Next, a *collision* occurs whenever 
 $h(k_i) = h(k_j)$
-for two keys $k_i \neq k_j \in \mathbb{U}$. A 
-well-behaved hash function avoids collisions.
+for two keys $k_i \neq k_j \in \mathbb{U}$.
+A well-behaved hash function avoids collisions.
 
 A hashmap $H$ supports $\verb|put|(key, val)$ and 
 $\verb|get|(key)$. 
