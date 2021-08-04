@@ -1,5 +1,5 @@
 ---
-title: What is Kademlia? (A gentle introduction) [WIP]
+title: What is Kademlia? (A somewhat gentle introduction) [WIP]
 description: Documenting my journey in studying the Kademlia paper, the peer-to-peer ditributed hash table. 
 date: '2021-07-29'
 ---
@@ -17,10 +17,33 @@ Even the abstract from the [Kademlia](http://css.csail.mit.edu/6.824/2014/papers
 is a lot to digest and I think we can say there's not going to be *any* hand-holding. 
 Accordingly, this blog will serve as a collection of my thoughts.
 
+### Review of the friendly hash table
+Firstly, a hash function is a map $h$ such that
+
+$$
+h : {0, 1, ..., u - 1} \to {0, 1, ..., m -1} = K.
+$$
+
+for $u < m$. In words, $h$ reduces a universe 
+$\mathbb{U}$ with $u$ 
+many keys to $m$. 
+
+Next, a *collision* occurs whenever 
+$h(k_i) = h(k_j)$
+for two keys $k_i \neq k_j \in \mathbb{U}$. A 
+well-behaved hash function avoids collisions.
+
+A hashmap $H$ supports $\verb|put|(key, val)$ and 
+$\verb|get|(key)$. 
+
+The former takes a key $k$ and stores value $v$
+in bucket $H[h(k)]$ and the latter returns 
+$H[h(k)]$. 
+
 ### What is a distributed hash table anyways?
 
 Much like the traditional hashmap $H$, DHT 
-supports $\verb|put|(key, val)$ and 
-$\verb|get|(key)$. 
+also supports $\verb|put|(key, val)$ and 
+$\verb|get|(key)$.
 
 
