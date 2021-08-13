@@ -19,7 +19,7 @@ is a lot to digest and I think we can say there's not going to be *any* hand-hol
 Accordingly, this blog will serve as a collection of my thoughts.
 
 ### An overview of the hash table
-Firstly, a hash function is a map $h$ such that
+To begin, we'll go over a few definitions. Firstly, a hash function is a map $h$ such that
 
 $$
 h : \{0, 1, ..., u - 1\} \to \{0, 1, ..., m -1\} = K.
@@ -42,12 +42,10 @@ $H[h(k)]$.
 
 The upshot of this datastructure is fantastic
 lookup times (constant on average), but sometimes
-we need to store **LARGE** values. 
+we need to store large values. 
 Accordingly, we can store parts of the map
-on separate computers. 
-
-A centralized computer, much
-like the director of a play, decides which keys
+on separate computers. But who coordinates all the computers? 
+A centralized computer, much like the director of a play, decides which keys
 of the hashmap go to which computer. But say
 the director decides to quit the play,
 we've lost access to the values in our hashmap and 
@@ -60,9 +58,7 @@ traditional hashmap, DHT
 also supports $\verb|put|(key, val)$ and 
 $\verb|get|(key)$. But it is fault-tolerant because 
 if a computer leaves the network, we can still access 
-the map. There are actually some degrees on 
-fault-tolerance that I've grazed over (FIXME: 
-attach reading on byzantine fault tolerance). 
+the map. 
 
 Now, it would be wonderful if we had a protocol 
 that partitions our map to many computers without
