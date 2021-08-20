@@ -1,0 +1,42 @@
+---
+title: Kademlia Explained [WIP]
+description: A description of the Kademlia system.
+date: '2021-08-20'
+edited: '2021-08-20' 
+---
+
+### What is Kademlia?
+
+Kademlia is a distributed hash table for decentralized peer-to-peer computer networks.
+
+### What is "peer-to-peer"?
+
+Typical networks are based on the client-server model, in which clients make
+requests to a service from a centralized server.
+
+Now, a peer-to-peer network contains nodes, or peers, who can share information with 
+one another without the need for a centralized server. 
+
+### What's so special about Kademlia nodes?
+
+Let's go over some properties of a node. 
+First, they are assigned a 160-bit *opaque* ID. By opaqueness, we mean that
+the ID contains information about the node instead of hodgepodge of numbers, 
+letters, and symbols.
+
+A node also contains an address. This address is helps other nodes connect
+to it in the network and it find other nodes with its third component: 
+a routing table.
+
+### Routing tables
+
+A routing table is the data structure which keeps information about
+the other nodes a node can contact. In short:
+
+> The ID tells us **who** this node is,
+ the address tells us **where** this node is,
+ and the routing table tells us **how** to get there.
+
+
+
+
