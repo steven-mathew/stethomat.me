@@ -161,6 +161,10 @@ function Home({posts}: IndexProps) {
                     </div>
                 </div>
             </CenteredColumn>
+            <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+            />
         </Page >
     )
 }
