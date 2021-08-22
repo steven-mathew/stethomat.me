@@ -9,7 +9,7 @@ import StackList from '../components/Projects'
 import {format, parseISO} from 'date-fns'
 import {getAllPosts} from '../pages/api/getPosts'
 import {PostType} from '../types/post'
-import {Toaster} from 'react-hot-toast'
+import toast, {Toaster} from 'react-hot-toast'
 
 type IndexProps = {
     posts: PostType[];
