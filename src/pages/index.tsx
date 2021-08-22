@@ -1,18 +1,30 @@
 import * as React from 'react'
 import Link from 'next/link'
-import {GetStaticProps} from 'next';
+import {GetStaticProps} from 'next'
 
 import Page from '../components/Page'
 import {CenteredColumn} from '../components/Layouts'
 import StackList from '../components/Projects'
 
-import {format, parseISO} from 'date-fns';
+import {format, parseISO} from 'date-fns'
 import {getAllPosts} from '../pages/api/getPosts'
 import {PostType} from '../types/post'
+import {Toaster} from 'react-hot-toast'
 
 type IndexProps = {
     posts: PostType[];
-};
+}
+
+const notify = () => toast('Copied!',
+    {
+        icon: '👏',
+        style: {
+            borderRadius: '10px',
+            background: 'var(--color-bg-notifications)',
+            color: 'var(--color-text-primary)',
+        },
+    }
+)
 
 function Home({posts}: IndexProps) {
     return (
@@ -116,10 +128,17 @@ function Home({posts}: IndexProps) {
                         </div>
 
                         <div className="flex justify-center">
-                            <a className="font-extrabold highlight-link-hover" href="mailto:ste.tho.mat@gmail.com">
+                            <button
+                                onClick={() => {
+                                    navigator.clipboard.writeText('ste.tho.mat@gmail.com')
+                                    notify()
+                                }}
+                                className="font-extrabold highlight-link-hover"
+                            >
                                 ste.tho.mat@gmail.com
-                            </a>
+                            </button>
                         </div>
+
 
                         <div className="p-8 mt-16 -mx-4 border-t border-b border-dashed bg-tertiary border-note space-y-4 md:-mx-8">
                             <p className="font-semibold">

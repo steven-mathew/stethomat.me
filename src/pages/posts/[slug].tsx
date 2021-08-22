@@ -1,40 +1,36 @@
-import {format, parseISO} from 'date-fns';
-import fs from 'fs';
-import matter from 'gray-matter';
-import mdxPrism from 'mdx-prism';
-import {GetStaticPaths, GetStaticProps} from 'next';
-import {serialize} from 'next-mdx-remote/serialize';
-import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import path from 'path';
-import React from 'react';
+import {format, parseISO} from 'date-fns'
+import fs from 'fs'
+import matter from 'gray-matter'
+import mdxPrism from 'mdx-prism'
+import {GetStaticPaths, GetStaticProps} from 'next'
+import {serialize} from 'next-mdx-remote/serialize'
+import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote'
+import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import path from 'path'
+import React from 'react'
 
 import markdown from 'remark-parse'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import rehypeKatex from 'rehype-katex';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeSlug from 'rehype-slug'
+import rehypeKatex from 'rehype-katex'
 
-import Layout, {WEBSITE_HOST_URL} from '../../components/Blog';
-import {MetaProps} from '../../types/layout';
-import {PostType} from '../../types/post';
-import {postFilePaths, POSTS_PATH} from '../../utils/mdxUtils';
+import Layout, {WEBSITE_HOST_URL} from '../../components/Blog'
+import {MetaProps} from '../../types/layout'
+import {PostType} from '../../types/post'
+import {postFilePaths, POSTS_PATH} from '../../utils/mdxUtils'
 
-// Custom components/renderers to pass to MDX.
-// Since the MDX files aren't loaded by webpack, they have no knowledge of how
-// to handle import statements. Instead, you must include components in scope
-// here.
 const components = {
     Head,
     Image,
     Link,
-};
+}
 
 type PostPageProps = {
-    source: MDXRemoteSerializeResult;
-    frontMatter: PostType;
-};
+    source: MDXRemoteSerializeResult
+    frontMatter: PostType
+}
 
 const PostPage = ({source, frontMatter}: PostPageProps): JSX.Element => {
     const customMeta: MetaProps = {
@@ -44,7 +40,7 @@ const PostPage = ({source, frontMatter}: PostPageProps): JSX.Element => {
         date: frontMatter.date,
         edited: frontMatter.edited,
         type: 'article',
-    };
+    }
 
     return (
         <Layout customMeta={customMeta}>
@@ -63,14 +59,14 @@ const PostPage = ({source, frontMatter}: PostPageProps): JSX.Element => {
                     {frontMatter.title}
                 </h1>
                 <div className="mb-10">
-                <p className="text-sm leading-snug text-tertiary">
-                    {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
-                </p>
-                {frontMatter.edited &&
                     <p className="text-sm leading-snug text-tertiary">
-                        Edited {format(parseISO(frontMatter.edited), 'MMMM dd, yyyy')}
+                        {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
                     </p>
-                }
+                    {frontMatter.edited &&
+                        <p className="text-sm leading-snug text-tertiary">
+                            Edited {format(parseISO(frontMatter.edited), 'MMMM dd, yyyy')}
+                        </p>
+                    }
                 </div>
                 <div className="prose dark:prose-dark">
                     <MDXRemote {...source} components={components} />
@@ -84,7 +80,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
     const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`);
     const source = fs.readFileSync(postFilePath);
 
-    const {content, data} = matter(source);
+    const {content, data} = matter(source)
 
     const mdxSource = await serialize(content, {
         // Optionally pass remark/rehype plugins
@@ -93,27 +89,27 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
             rehypePlugins: [mdxPrism, rehypeSlug, rehypeAutolinkHeadings, rehypeKatex],
         },
         scope: data,
-    });
+    })
 
     return {
         props: {
             source: mdxSource,
             frontMatter: data,
         },
-    };
-};
+    }
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
     const paths = postFilePaths
         // Remove file extensions for page paths
         .map((path) => path.replace(/\.mdx?$/, ''))
         // Map the path into the static paths object required by Next.js
-        .map((slug) => ({params: {slug}}));
+        .map((slug) => ({params: {slug}}))
 
     return {
         paths,
         fallback: false,
-    };
-};
+    }
+}
 
 export default PostPage

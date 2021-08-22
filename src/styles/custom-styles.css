@@ -64,6 +64,7 @@
   --color-bg-primary: hsla(0, 100%, 100%, 1);
   --color-bg-secondary: hsla(210, 38%, 95%, 1);
   --color-bg-accent-hover: hsla(207, 73%, 57%, 1);
+  --color-bg-notifications: hsla(0, 100%, 100%, 1); 
 
   --color-text-accent: hsla(211, 61%, 43%, 1);
   --color-text-primary: hsla(218, 23%, 23%, 1);
@@ -86,6 +87,7 @@
   --color-bg-primary: #0e1213;
   --color-bg-secondary: #3d3836;
   --color-bg-tertiary: rgba(251, 191, 36, 0.1); 
+  --color-bg-notifications: rgba(251, 191, 36, 0.1); 
   --color-bg-accent-hover: #7fa580; 
 
   --color-text-accent: #fabd2f;

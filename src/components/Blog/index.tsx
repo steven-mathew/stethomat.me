@@ -5,6 +5,7 @@ import {CenteredColumn} from '../../components/Layouts'
 import Button from '../../components/Button'
 
 import Link from 'next/link'
+import toast, {Toaster} from 'react-hot-toast';
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -12,6 +13,17 @@ type LayoutProps = {
 }
 
 export const WEBSITE_HOST_URL = 'stethomat.me';
+
+const notify = () => toast('Copied!',
+    {
+        icon: '👏',
+        style: {
+            borderRadius: '10px',
+            background: 'var(--color-bg-notifications)',
+            color: 'var(--color-text-primary)',
+        },
+    }
+)
 
 const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
     return (
@@ -34,7 +46,10 @@ const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
                             If something is off or you need some clarification,
                             please email me at{' '}
                             <button
-                                onClick={() => navigator.clipboard.writeText('ste.tho.mat@gmail.com')}
+                                onClick={() => {
+                                    navigator.clipboard.writeText('ste.tho.mat@gmail.com')
+                                    notify()
+                                }}
                                 className="text-accent"
                             >
                                 ste.tho.mat@gmail.com
@@ -44,6 +59,10 @@ const Layout = ({children, customMeta}: LayoutProps): JSX.Element => {
                     </div>
                 </div>
             </CenteredColumn>
+            <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+            />
         </Page>
     )
 }

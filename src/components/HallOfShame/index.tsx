@@ -1,5 +1,18 @@
 import data from './data'
 
+import toast, {Toaster} from 'react-hot-toast';
+
+const notify = () => toast('Copied!',
+    {
+        icon: '👏',
+        style: {
+            borderRadius: '10px',
+            background: 'var(--color-bg-notifications)',
+            color: 'var(--color-text-primary)',
+        },
+    }
+)
+
 export default function JokesList() {
     return (
         <div className="mt-8 space-y-8">
@@ -16,6 +29,7 @@ export default function JokesList() {
                 </div>
             ))}
             {data.length === 0 && <p>No jokes yet!</p>}
+
             <div className="p-8 mt-16 -mx-4 border-t border-b border-dashed bg-tertiary border-note space-y-4 md:-mx-8">
                 <p className="font-semibold">
                     Disclaimer
@@ -24,11 +38,23 @@ export default function JokesList() {
                     <p>
                         If you have an actual
                         hilarious joke, please email me at{' '}
-                        <a href="mailto:ste.tho.mat@gmail.com">ste.tho.mat@gmail.com</a>
-                        .
+                        <button
+                            onClick={() => {
+                                navigator.clipboard.writeText('ste.tho.mat@gmail.com')
+                                notify()
+                            }}
+                            className="text-accent"
+                        >
+                            ste.tho.mat@gmail.com
+                        </button>
+                        {' '}by clicking to copy to clipboard.
                     </p>
                 </div>
             </div>
+            <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+            />
         </div >
     )
 }
