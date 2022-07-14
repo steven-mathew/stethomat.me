@@ -64,25 +64,23 @@ function Home({ posts }: IndexProps) {
           <div className="space-y-8 md:items-center">
             <div className="prose lg:prose-lg text-primary">
               <p>
-                I just kicked off my third year{' '}
+                I just kicked off an internship at Oracle, in my third year{' '}
                 <span className="text-accent"> @ </span> UofT, expecting a CS
-                specialist degree in May of 2023.
+                specialist degree in January of 2024.
               </p>
 
               <p>
-                I develop modern production-ready applications in React,
-                memory-safe tools to improve my programming workflow, sometimes
-                write my own programming languages, and even put together blog
+                I develop memory-safe tools to improve my programming workflow, 
+                sometimes write my own programming languages, and even put together blog
                 posts.
               </p>
               <p>
                 When I&apos;m not <em> knee deep </em> in mechanical keyboard
                 videos, you&apos;ll find me writing open-source software or
-                playing piano (currently studying Rachmaninow Sonata No. 2, Op.
-                36) by day and learning Rust by night.
+                playing piano by day and learning Rust by night.
               </p>
               <p>
-                To the recruiter, I&apos;m on the hunt for internships. Feel
+                To the recruiter, I&apos;m on the hunt for internships for Summer 2023. Feel
                 free to download my <a href="/static/resume.pdf">resume</a>,
                 take a gander at my{' '}
                 <a href="https://github.com/steven-mathew">GitHub</a>, or reach
